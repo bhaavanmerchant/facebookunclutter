@@ -25,9 +25,24 @@ function cleanUp() {
             }
 		}
 	}
-    document.getElementById('pagelet_ego_pane_w').style.display = 'none';
-    document.getElementById('pagelet_ego_pane').style.display = 'none';
-    document.getElementById('pagelet_navigation').style.display = 'none';
+    var nodeSide = document.getElementById('pagelet_ego_pane_w');
+        if (nodeSide != null && typeof nodeSide !== "undefined" ) 
+	   {
+	       nodeSide.style.display = 'none';
+	   }
+    
+    nodeSide = document.getElementById('pagelet_ego_pane');
+        if (nodeSide != null && typeof nodeSide !== "undefined" ) 
+	   {
+	       nodeSide.style.display = 'none';
+	   }
+    
+    nodeSide = document.getElementById('pagelet_navigation');
+        if (nodeSide != null && typeof nodeSide !== "undefined" ) 
+	   {
+	       nodeSide.style.display = 'none';
+	   }
+    
     var nodesU = document.body.getElementsByClassName('storyUnconnectedPost');
     if (nodesU != null && typeof nodesU !== "undefined" ) 
 	{
