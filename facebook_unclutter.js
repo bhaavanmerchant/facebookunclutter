@@ -13,6 +13,17 @@
 // @exclude     htt*://*.facebook.com/ajax/*
 // ==/UserScript==
 
+function removeNode(node) {
+    node.style.display = 'none';
+}
+
+function cleanse(node) {
+    if (node != null && typeof node !== "undefined" ) 
+	{
+	   removeNode(node);
+	}
+}
+
 function cleanUp() {
     
     var nodes = document.body.getElementsByClassName('clearfix storyContent');
@@ -21,33 +32,24 @@ function cleanUp() {
 		for (var i = 0; i < nodes.length; i++) {            
             if (nodes[i].innerHTML.indexOf("href=\"/about/ads\"") != -1)
             {
-                nodes[i].style.display = 'none';           
+                removeNode(nodes[i]);
             }
 		}
 	}
     var nodeSide = document.getElementById('pagelet_ego_pane_w');
-        if (nodeSide != null && typeof nodeSide !== "undefined" ) 
-	   {
-	       nodeSide.style.display = 'none';
-	   }
+    cleanse(nodeSide);
     
     nodeSide = document.getElementById('pagelet_ego_pane');
-        if (nodeSide != null && typeof nodeSide !== "undefined" ) 
-	   {
-	       nodeSide.style.display = 'none';
-	   }
+    cleanse(nodeSide);
     
     nodeSide = document.getElementById('pagelet_navigation');
-        if (nodeSide != null && typeof nodeSide !== "undefined" ) 
-	   {
-	       nodeSide.style.display = 'none';
-	   }
+    cleanse(nodeSide);
     
     var nodesU = document.body.getElementsByClassName('storyUnconnectedPost');
     if (nodesU != null && typeof nodesU !== "undefined" ) 
 	{
         for (var i = 0; i < nodesU.length; i++) {
-            nodesU[i].style.display = "none";
+            removeNode(nodesU[i]);
         }
     }
 }
