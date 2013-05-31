@@ -12,7 +12,7 @@
 // @exclude     htt*://upload.facebook.com/*
 // @exclude     htt*://*.facebook.com/ajax/*
 // ==/UserScript==
-
+var counter = 0;
 function removeNode(node) {
     node.style.display = 'none';
 }
@@ -38,7 +38,10 @@ function cleanUp() {
 	}
     var nodeSide = document.getElementById('pagelet_ego_pane_w');
     cleanse(nodeSide);
-    
+    counter = counter +1;
+/*        if (counter % 10 == 0 ) {
+        alert (counter);
+        } */
     nodeSide = document.getElementById('pagelet_ego_pane');
     cleanse(nodeSide);
     
@@ -54,4 +57,5 @@ function cleanUp() {
     }
 }
 
-document.addEventListener("DOMNodeInserted", cleanUp, true);
+//document.addEventListener("DOMNodeInserted", cleanUp, true);
+setInterval(cleanUp, 2000);
