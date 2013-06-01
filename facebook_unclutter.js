@@ -6,7 +6,7 @@
 // @include     facebook.com/*
 // @include     htt*://*.facebook.com/*
 // @grant 		metadata
-// @version     1.1
+// @version     1
 // @exclude     htt*://*channel*.facebook.com*
 // @exclude     htt*://*static*.facebook.com*
 // @exclude     htt*://upload.facebook.com/*
@@ -28,13 +28,14 @@ function cleanUp() {
     
     var nodes = document.body.getElementsByClassName('clearfix storyContent');
     if (nodes != null && typeof nodes !== "undefined" ) 
-	{        
-		for (var i = 0; i < nodes.length; i++) {            
+	{
+        for (var i = 0; i < nodes.length; i++)
+        {
             if (nodes[i].innerHTML.indexOf("href=\"/about/ads\"") != -1)
             {
                 removeNode(nodes[i]);
             }
-		}
+        }
 	}
     var nodeSide = document.getElementById('pagelet_ego_pane_w');
     cleanse(nodeSide);
