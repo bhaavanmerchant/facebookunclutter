@@ -27,8 +27,8 @@ function cleanse(node) {
 function cleanUp() {
     
     var nodes = document.body.getElementsByClassName('clearfix storyContent');
-    if (nodes != null && typeof nodes !== "undefined" ) 
-	{
+    if (nodes != null && typeof nodes !== "undefined" )
+    {
         for (var i = 0; i < nodes.length; i++)
         {
             if (nodes[i].innerHTML.indexOf("href=\"/about/ads\"") != -1)
@@ -36,7 +36,7 @@ function cleanUp() {
                 removeNode(nodes[i]);
             }
         }
-	}
+    }
     var nodeSide = document.getElementById('pagelet_ego_pane_w');
     cleanse(nodeSide);
     counter = counter +1;
