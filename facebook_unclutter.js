@@ -6,7 +6,7 @@
 // @include     facebook.com/*
 // @include     htt*://*.facebook.com/*
 // @grant 		metadata
-// @version     1
+// @version     1.3
 // @exclude     htt*://*channel*.facebook.com*
 // @exclude     htt*://*static*.facebook.com*
 // @exclude     htt*://upload.facebook.com/*
