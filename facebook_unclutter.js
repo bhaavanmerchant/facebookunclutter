@@ -56,6 +56,15 @@ function cleanUp() {
             removeNode(nodesU[i]);
         }
     }
+    
+    nodesU = document.body.getElementsByClassName('uiStreamShareLikePageBox');
+    if (nodesU != null && typeof nodesU !== "undefined" ) 
+	{
+        for (var i = 0; i < nodesU.length; i++) {
+            removeNode(nodesU[i]);
+        }
+    }
+    
 }
 
 //document.addEventListener("DOMNodeInserted", cleanUp, true);
