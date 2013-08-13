@@ -50,6 +50,20 @@ function cleanUp() {
             removeNode(nodesU[i]);
         }
     }
+	
+	var itemsSpon = document.body.getElementsByClassName('uiStreamHeadlineWithLikeButton');
+	var sponParentNumber = 4;
+	if (itemsSpon != null && typeof itemsSpon !== "undefined" ) 
+	{
+        for (var i = 0; i < itemsSpon.length; i++) {
+			var itemSpon = itemsSpon[i];
+			for (var j = 0; j < sponParentNumber; j++ ) {
+			itemSpon = itemSpon.parentNode;
+			}
+            removeNode(itemSpon);
+        }
+		
+    }
     
 }
 
